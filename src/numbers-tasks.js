@@ -106,7 +106,14 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (0,1)     => 0
  */
 function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+  let scaliar = x1 * x2 + y1 * y2;
+  console.log(scaliar);
+  let modX = Math.sqrt(x1 ** 2 + x2 ** 2);
+  let modY = Math.sqrt(y1 ** 2 + y2 ** 2);
+    console.log(modX * modY);
+  let result = scaliar / (modX * modY);
+  console.log(result * 180 / Math.PI);
+  return;
 }
 
 /**
