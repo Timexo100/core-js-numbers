@@ -105,15 +105,11 @@ function getLinearEquationRoot(a, b) {
  *   (0,-1) (1,0)    => π/2
  *   (0,1) (0,1)     => 0
  */
-function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-  let scaliar = x1 * x2 + y1 * y2;
-  console.log(scaliar);
-  let modX = Math.sqrt(x1 ** 2 + x2 ** 2);
-  let modY = Math.sqrt(y1 ** 2 + y2 ** 2);
-    console.log(modX * modY);
-  let result = scaliar / (modX * modY);
-  console.log(result * 180 / Math.PI);
-  return;
+function getAngleBetweenVectors(x1, y1, x2, y2) {
+  const scaliar = x1 * x2 + y1 * y2;
+  const modX = Math.sqrt(x1 ** 2 + y1 ** 2);
+  const modY = Math.sqrt(x2 ** 2 + y2 ** 2);
+  return Math.acos(scaliar / (modX * modY));
 }
 
 /**
